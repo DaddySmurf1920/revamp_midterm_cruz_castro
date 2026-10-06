@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Revamp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="checkout-body">
+
+    <main class="checkout-wrapper">
+        <div class="checkout-top-header">CHECKOUT</div>
+        <div class="checkout-brand">REVAMP</div>
+
+        <div class="checkout-grid">
+            <form id="checkoutForm" class="checkout-form-col">
+                <div class="form-group">
+                    <label class="form-section-title">CONTACT INFORMATION</label>
+                    <input type="email" placeholder="Email Address" required class="dark-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-section-title">SHIPPING INFORMATION</label>
+                    <input type="text" placeholder="Full Name" required class="dark-input">
+                    <input type="text" placeholder="Address" required class="dark-input">
+                    <div class="input-row">
+                        <input type="text" placeholder="City" required class="dark-input">
+                        <input type="text" placeholder="Postal Code" required class="dark-input">
+                    </div>
+                    <input type="tel" placeholder="Phone Number" required class="dark-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-section-title">PAYMENT METHOD</label>
+                    <div class="payment-options">
+                        <label class="radio-label">
+                            <input type="radio" name="payment" value="GCash" checked>
+                            <span class="custom-radio"></span> GCash
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="payment" value="Cash on Delivery">
+                            <span class="custom-radio"></span> Cash on Delivery
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="place-order-btn">PLACE ORDER</button>
+            </form>
+
+            <div class="checkout-summary-col">
+                <h2 class="summary-title">ORDER SUMMARY</h2>
+                <div id="checkoutSummaryList" class="summary-items"></div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="checkoutShipping">₱100</span>
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-row total-row">
+                    <span>TOTAL</span>
+                    <span id="checkoutTotal">₱0</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

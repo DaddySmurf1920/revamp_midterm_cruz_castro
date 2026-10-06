@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REVAMP - Mobile Layouts Showcase</title>
+  <style>
+    :root {
+      --bg-color: #F2F2F2;
+      --card-bg: #FFFFFF;
+      --dark-color: #111111;
+      --border-color: #B8B8B8;
+      --accent-gray: #6B6B6B;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1a1a1a;
+      color: var(--dark-color);
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Grid container for 5 mobile screens */
+    .mobile-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    /* Standard 390px Mobile Frame */
+    .mobile-frame {
+      width: 390px;
+      height: 750px;
+      background-color: var(--bg-color);
+      border: 4px solid var(--dark-color);
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+
+    /* Screen Title Header */
+    .screen-label {
+      background: var(--dark-color);
+      color: #fff;
+      padding: 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    /* Universal Mobile Header */
+    .header {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 15px;
+      flex: 1;
+    }
+
+    .btn-dark {
+      background-color: var(--dark-color);
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .product-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 8px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .product-img {
+      width: 100%;
+      height: 110px;
+      background-color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--accent-gray);
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      background: var(--dark-color);
+      color: #fff;
+      font-size: 9px;
+      padding: 2px 4px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 8px;
+      margin: 4px 0 10px 0;
+      border: 1px solid var(--border-color);
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>390px Mobile Layouts Showcase</h1>
+
+  <div class="mobile-grid">
+
+    <!-- 1. HOME PAGE -->
+    <div class="mobile-frame">
+      <div class="screen-label">1. Home Page</div>
+      <div class="header">
+        <span>☰</span>
+        <span>REVAMP</span>
+        <span>BAG (1)</span>
+      </div>
+      <div class="content">
+        <h2 style="font-size: 18px; margin-top: 0;">OLD PIECES.<br>NEW IDENTITY.</h2>
+        <p style="font-size: 12px; color: var(--accent-gray);">Reworked clothing crafted from recycled textiles.</p>
+        <button class="btn-dark">[ SHOP REWORKED ]</button>
+        <h3 style="font-size: 14px; margin-top: 20px;">Featured Drops</h3>
+        <div class="product-grid">
+          <div class="product-card">
+            <span class="badge">1-OF-1</span>
+            <div class="product-img">DECON TEE</div>
+            <b>Reworked Tee</b><br>₱850
+          </div>
+          <div class="product-card">
+            <span class="badge">1-OF-1</span>
+            <div class="product-img">DENIM JACKET</div>
+            <b>Denim Jacket</b><br>₱1,850
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. PRODUCT LISTING -->
+    <div class="mobile-frame">
+      <div class="screen-label">2. Product Listing</div>
+      <div class="header">
+        <span>☰</span>
+        <span>REVAMP</span>
+        <span>BAG (1)</span>
+      </div>
+      <div class="content">
+        <div style="display: flex; gap: 5px; margin-bottom: 12px;">
+          <button class="btn-dark" style="margin:0; padding:6px;">[ FILTER ]</button>
+          <button class="btn-dark" style="margin:0; padding:6px;">[ SORT v ]</button>
+        </div>
+        <div class="product-grid">
+          <div class="product-card">
+            <span class="badge">1-OF-1</span>
+            <div class="product-img">TEE</div>
+            <b>Reworked Tee</b><br>₱850
+          </div>
+          <div class="product-card">
+            <span class="badge">1-OF-1</span>
+            <div class="product-img">JACKET</div>
+            <b>Denim Jacket</b><br>₱1,850
+          </div>
+          <div class="product-card">
+            <span class="badge">1-OF-1</span>
+            <div class="product-img">PANTS</div>
+            <b>Patchwork Pants</b><br>₱1,200
+          </div>
+          <div class="product-card">
+            <span class="badge">1-OF-1</span>
+            <div class="product-img">HOODIE</div>
+            <b>Reclaimed Hoodie</b><br>₱1,500
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. PRODUCT DETAILS -->
+    <div class="mobile-frame">
+      <div class="screen-label">3. Product Details</div>
+      <div class="header">
+        <span>‹ BACK</span>
+        <span>REVAMP</span>
+        <span>BAG (1)</span>
+      </div>
+      <div class="content">
+        <div class="product-img" style="height: 180px;">MAIN PRODUCT IMAGE</div>
+        <span class="badge">REVAMP ID: RV-001</span>
+        <h3 style="margin: 4px 0;">Reworked Denim Jacket</h3>
+        <p style="margin: 0 0 10px 0; font-weight: bold;">₱1,850</p>
+        <div style="margin-bottom: 10px;">
+          <small>SELECT SIZE:</small><br>
+          <button style="padding: 4px 10px;">S</button>
+          <button style="padding: 4px 10px; font-weight: bold;">M</button>
+          <button style="padding: 4px 10px;">L</button>
+        </div>
+        <div style="background: #e5e5e5; padding: 8px; font-size: 11px; margin-bottom: 10px;">
+          <b>Transformation Inspector:</b><br>
+          Original Garment → Reworked Denim
+        </div>
+        <button class="btn-dark">[ ADD TO BAG - ₱1,850 ]</button>
+      </div>
+    </div>
+
+    <!-- 4. SHOPPING CART -->
+    <div class="mobile-frame">
+      <div class="screen-label">4. Shopping Cart</div>
+      <div class="header">
+        <span>☰</span>
+        <span>REVAMP</span>
+        <span>BAG (1)</span>
+      </div>
+      <div class="content">
+        <h3>YOUR BAG (1 ITEM)</h3>
+        <div style="display: flex; gap: 10px; background: white; padding: 8px; border: 1px solid var(--border-color);">
+          <div class="product-img" style="width: 60px; height: 60px; margin: 0;">IMG</div>
+          <div style="font-size: 12px; flex: 1;">
+            <b>Reworked Denim Jacket</b><br>
+            Size: M<br>
+            <b>₱1,850</b>
+          </div>
+        </div>
+        <hr style="margin: 20px 0; border: none; border-top: 1px dashed var(--border-color);">
+        <div style="font-size: 13px;">
+          <p>Subtotal: <b>₱1,850</b></p>
+          <p>Estimated Shipping: <b>₱150</b></p>
+          <p style="font-size: 16px;"><b>TOTAL: ₱2,000</b></p>
+        </div>
+        <button class="btn-dark">[ PROCEED TO CHECKOUT ]</button>
+      </div>
+    </div>
+
+    <!-- 5. CHECKOUT SCREEN -->
+    <div class="mobile-frame">
+      <div class="screen-label">5. Checkout</div>
+      <div class="header">
+        <span>‹ BACK</span>
+        <span>CHECKOUT</span>
+        <span>🔒</span>
+      </div>
+      <div class="content" style="font-size: 12px;">
+        <b>CONTACT INFORMATION</b>
+        <input class="input-field" type="email" placeholder="Email Address">
+
+        <b>SHIPPING ADDRESS</b>
+        <input class="input-field" type="text" placeholder="Full Name">
+        <input class="input-field" type="text" placeholder="Shipping Address">
+        <input class="input-field" type="text" placeholder="City / Municipality">
+
+        <b>PAYMENT METHOD</b><br>
+        <label><input type="radio" name="pay" checked> GCash</label><br>
+        <label><input type="radio" name="pay"> Cash on Delivery</label>
+
+        <button class="btn-dark" style="margin-top: 15px;">[ PLACE ORDER - ₱2,000 ]</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

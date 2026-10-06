@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Access - Revamp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+  <style>
+    :root {
+        --color-black: #000000;
+        --color-dark-gray: #1f1f1f;
+        --color-bg-textured: #dedcd8;
+        --color-card-bg: rgba(235, 233, 228, 0.92);
+        --color-white: #ffffff;
+        --font-logo: 'Alex Brush', cursive;
+        --font-heading: 'Times New Roman', serif;
+        --font-body: 'Inter', sans-serif;
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: var(--color-bg-textured);
+        color: var(--color-black);
+        font-family: var(--font-body);
+        min-height: 100vh;
+    }
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+    }
+    .site-logo {
+        font-family: var(--font-logo);
+        font-size: 52px;
+        text-decoration: none;
+        color: var(--color-black);
+        font-weight: normal;
+    }
+    .nav-links {
+        display: flex;
+        gap: 25px;
+        list-style: none;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: var(--color-black);
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    .auth-grid {
+        max-width: 900px;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    @media (max-width: 768px) {
+        .auth-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .auth-box {
+        background: var(--color-card-bg);
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.08);
+        padding: 24px;
+        border-radius: 2px;
+    }
+    .auth-title {
+        font-family: var(--font-heading);
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        border-bottom: 2px solid var(--color-black);
+        padding-bottom: 8px;
+    }
+    .auth-form-group {
+        margin-bottom: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .auth-form-group label {
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: var(--font-body);
+    }
+    .auth-form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background: var(--color-white);
+        box-sizing: border-box;
+        font-family: var(--font-body);
+        border-radius: 4px;
+    }
+    .auth-form-group input:focus {
+        border-color: var(--color-black);
+        outline: none;
+    }
+    .auth-forgot-wrap {
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    .auth-forgot-link {
+        font-size: 11px;
+        color: var(--color-dark-gray);
+        text-decoration: none;
+    }
+    .btn-action {
+        background-color: var(--color-dark-gray);
+        color: var(--color-white);
+        border: none;
+        padding: 12px;
+        width: 100%;
+        font-family: monospace;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 8px;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+    }
+    .btn-action:hover {
+        background-color: var(--color-black);
+    }
+    .security-notice {
+        grid-column: 1 / -1;
+        background: rgba(235, 233, 228, 0.6);
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        padding: 12px;
+        text-align: center;
+        font-size: 12px;
+        color: var(--color-dark-gray);
+        border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="site-logo">Revamp</a>
+    <ul class="nav-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Search</a></li>
+      <li><a href="account.html">Account</a></li>
+      <li><a href="cart.html" id="cartNavCount">Cart (0)</a></li>
+    </ul>
+  </header>
+
+  <div class="auth-grid">
+    <div class="auth-box">
+      <h2 class="auth-title">Existing Member</h2>
+      <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Sign in functionality simulated successfully.');">
+        <div class="auth-form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="customer@email.com" required>
+        </div>
+        <div class="auth-form-group">
+          <label>Password</label>
+          <input type="password" placeholder="••••••••" required>
+        </div>
+        <div class="auth-forgot-wrap">
+          <a href="#" class="auth-forgot-link">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn-action">[ SIGN IN ]</button>
+      </form>
+    </div>
+
+    <div class="auth-box">
+      <h2 class="auth-title">Create Account</h2>
+      <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Account registration simulated successfully.');">
+        <div class="auth-form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Juan Cruz" required>
+        </div>
+        <div class="auth-form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="customer@email.com" required>
+        </div>
+        <div class="auth-form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Create password" required>
+        </div>
+        <button type="submit" class="btn-action">[ REGISTER ]</button>
+      </form>
+    </div>
+
+    <div class="security-notice">
+      🔒 <b>SECURE 256-BIT SSL ENCRYPTION</b> — Your personal data and checkout information are fully encrypted and protected under strict privacy standards.
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

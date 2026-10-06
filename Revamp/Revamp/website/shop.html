@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Revamp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="site-logo">Revamp</a>
+        <ul class="nav-links">
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="cart.html">Cart (0)</a></li>
+        </ul>
+    </header>
+
+    <main class="shop-container">
+        <h1 class="shop-title">SHOP</h1>
+
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="All">[ All ]</button>
+            <button class="filter-btn" data-category="Tops">[ Tops ]</button>
+            <button class="filter-btn" data-category="Bottoms">[ Bottoms ]</button>
+            <button class="filter-btn" data-category="Outerwear">[ Outerwear ]</button>
+        </div>
+
+        <div id="shopGrid" class="products-grid"></div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
